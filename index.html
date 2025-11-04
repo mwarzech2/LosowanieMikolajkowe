@@ -59,7 +59,8 @@ function encodeBase64Unicode(str) {
   const bytes = new TextEncoder().encode(str);
   let binary = "";
   bytes.forEach(b => binary += String.fromCharCode(b));
-  return btoa(binary);
+  const base64 = btoa(binary);
+  return base64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
 document.getElementById("losuj").addEventListener("click", () => {
