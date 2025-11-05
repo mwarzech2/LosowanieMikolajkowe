@@ -92,6 +92,8 @@
 
     btn.addEventListener("click", () => {
       if (!tresc) {
+        btn.style.display = "none";
+        wynik.style.opacity = 1;
         wynik.style.display = "block";
         wynik.style.color = "red";
         wynik.textContent = "Błąd: brak treści losowania.";
