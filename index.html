@@ -213,7 +213,7 @@ document.getElementById("losuj").addEventListener("click", () => {
   resultDiv.innerHTML = "<h3>Wyniki (linki dla każdej osoby):</h3>";
   const baseUrl = window.location.href;
   for (const [osoba, wylosowany] of Object.entries(wynik)) {
-    const message = `W tym roku na Mikołajki wylosowałeś/aś: ${wylosowany} 🎁`;
+    const message = `W tym roku na Mikołajki wylosowałeś/aś: \n${wylosowany} 🎁`;
     const encoded_person = encodeBase64Unicode(osoba);
     const encoded = encodeBase64Unicode(message);
     const link = `losowanie?person=${encoded_person}&data=${encoded}`;
